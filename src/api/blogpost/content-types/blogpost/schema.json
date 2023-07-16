@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogposts",
+  "info": {
+    "singularName": "blogpost",
+    "pluralName": "blogposts",
+    "displayName": "blogpost",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "blogbody": {
+      "type": "richtext"
+    },
+    "splash": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "header": {
+      "type": "dynamiczone",
+      "components": [
+        "header.header"
+      ]
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "header.header"
+      ]
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.footer-navigation"
+    }
+  }
+}
