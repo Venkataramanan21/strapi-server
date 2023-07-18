@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_members",
+  "info": {
+    "singularName": "team-member",
+    "pluralName": "team-members",
+    "displayName": "teamMember",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "about": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true,
+      "max": "9999999999",
+      "min": "100000000"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Man",
+        "Woman"
+      ],
+      "required": false
+    }
+  }
+}
